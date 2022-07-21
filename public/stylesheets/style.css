@@ -1,0 +1,222 @@
+/*body {*/
+/*  padding: 50px;*/
+/*  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+/*}*/
+
+/*a {*/
+/*  color: #00B7FF;*/
+/*}*/
+*{
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
+}
+body{
+  margin: 0;
+
+}
+.container{
+  max-width: max-content;
+  margin: auto;
+}
+.img-logo{
+  width: 100%;
+
+}
+header{
+  margin-bottom: 10px;
+}
+header nav {
+  text-align: center;
+
+}
+figure{
+  padding: 0;
+  margin: 0;
+}
+header nav figure{
+  width: 150px;
+  margin: auto;
+
+}
+header nav .menu
+{
+  margin: 0;
+  padding: 0;
+}
+header nav .menu li
+{
+  display: inline-block;
+  margin: 15px;
+}
+header nav .menu .select{
+  border-bottom: 1px solid #000;
+}
+header nav .menu li a
+{
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+header nav .menu li a:hover{
+  border-bottom: 2px solid red;
+  animation-name: hieuUngChu;
+  animation-duration: 1s;
+  color: blue;
+}
+main .content1{
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+main .content1 .content1-item-left
+{
+  text-align: left;
+  margin: auto 15px auto 15px;
+
+
+}
+main .content1 .content1-item-left h3
+{
+  font-size: 24px;
+  text-transform: uppercase;
+}
+main .content1 .content1-item-left p{
+  font-size: 18px;
+
+}
+main .content1 .content1-item-left button{
+  font-size: 18px;
+  border: 1px solid rgb(238, 169, 20);
+  padding: 8px;
+  background: rgb(238, 169, 20);
+  color: white;
+}
+main .content1 .content1-item-left button:hover
+{
+  cursor: pointer;
+  border: 1px solid rgb(54, 255, 54);
+  background: rgb(54, 255, 54);
+  color: blue;
+}
+main section .content-body{
+  text-align: center;
+  font-size: 36px;
+  margin: 30px 0;
+}
+main .content2
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+main .content2-item{
+  text-align: center;
+  position: relative;
+  /* width: fit-content; */
+  overflow: hidden;
+}
+main .content2-item .info{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(150px);
+  transition: ease-in-out 3s;
+  animation-name: moveOut;
+  animation-duration: 3s;
+}
+@keyframes moveOut {
+  0% {background: white; opacity: 1;}
+  30% {background: red; opacity: 0.7;}
+  60% {background: yellow; opacity: 0.4;}
+
+}
+main .content2-item:hover .info{
+  transform: translateY(0);
+  transition: 2s;
+  background: white;
+  animation-name: moveIn;;
+  animation-duration: 2s;
+}
+@keyframes moveIn {
+  100% {background: white; opacity: 1;}
+  60% {background: red; opacity: 0.7;}
+  30% {background: yellow; opacity: 0.4;}
+}
+
+main .content2-item span
+{
+  font-weight: bold;
+  display: block;
+  margin: 10px;
+}
+main .content2-item .title{
+  animation-iteration-count: infinite;
+  animation-name: hieuUngChu;
+  animation-duration: 0.5s;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+@keyframes hieuUngChu {
+  0% {color: back;}
+  25% {color: red}
+  50% {color: green}
+  75% {color: greenyellow;}
+
+}
+main .content2-item .price{
+  font-size: 18px;
+  color: red;
+}
+main .content2-item .click
+{
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+main .content2-item:hover .click{
+  background: rgb(25, 28, 34);
+  color: white;
+  animation: moveIn;
+  animation-duration: 2s;
+}
+
+main .content2-item .click:hover
+{
+  color: blue;
+  font-weight: bold;
+  background: yellow;
+}
+footer
+{
+  margin: 15px 0;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(12, 12, 95);
+}
+footer span{
+  color: white;
+  margin: 0 0 5px 10px;
+}
+footer form{
+  margin: 0 10px 5px 0;
+}
+footer input{
+  font-size: 18px;
+  padding: 8px;
+  color: white;
+  background: rgb(12, 12, 95);
+  border: 1px solid rgb(238, 169, 20);
+}
+footer input[type = text]::placeholder{
+  padding: 5px;
+  color: white;
+}
+footer input[type = submit]{
+  margin-left:10px;
+  background: rgb(238, 169, 20) ;
+}
